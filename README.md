@@ -34,18 +34,23 @@ flutter pub get
 
 ## 3. Conectar con la API
 
-Por defecto, la aplicación usa la API local de XAMPP:
+Por defecto, la aplicación usa la API remota:
 
-- Navegador y escritorio: `http://localhost/veterinaria/public/api`
-- Emulador Android: `http://10.0.2.2/veterinaria/public/api`
+```text
+https://vetclinicapp.online/veterinaria/public/api
+```
 
-Antes de ejecutarla, inicia **Apache** y **MySQL** desde XAMPP y asegúrate de que
-la página veterinaria esté instalada en `htdocs/veterinaria`.
-
-Para utilizar una API remota sin modificar el código:
+Para utilizar la página local de XAMPP sin modificar el código, ejecuta en
+navegador o escritorio:
 
 ```powershell
-flutter run --dart-define=API_BASE_URL=https://TU_DOMINIO/public/api
+flutter run --dart-define=API_BASE_URL=http://localhost/veterinaria/public/api
+```
+
+En el emulador Android usa:
+
+```powershell
+flutter run --dart-define=API_BASE_URL=http://10.0.2.2/veterinaria/public/api
 ```
 
 ## 4. Ejecutar la aplicación
